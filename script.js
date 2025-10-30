@@ -37,4 +37,21 @@ student.push({
     const average = sum/student.length;
     console.log(`Average Mark: ${average}%`)
     
+    let highestMark = 0;
+    let lowestMark = 0;
 
+    for(let i = 0; i < student.length; i++) {
+        const score = student[i].marks;
+        if (score > highestMark){
+
+            highestMark = score;
+        }
+
+        if (score < lowestMark){
+
+            lowestMark = score;
+        }
+
+        console.log('Highest Score:',  highestMark)
+        console.log('Lowest Score:', lowestMark)
+    }
