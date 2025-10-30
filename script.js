@@ -1,6 +1,6 @@
-let Students = parseInt(prompt("Number of students"));
-let studentName = prompt("Student name");
-let marks = parseFloat(prompt("Student marks(1-100)%"));
+// let Students = parseInt(prompt("Number of students"));
+// let studentName = prompt("Student name");
+// let marks = parseFloat(prompt("Student marks(1-100)%"));
 
 // console.log("No. of Students:" + Students);
 // console.log("Name:" + studentName);
@@ -24,8 +24,17 @@ student.push({
     marks: 71  
 }
 )
+// console.log(student[1])
 
     for(let i = 0; i < student.length; i++ ) {
         
-        console.log(`Name: ${student[0].name} Marks: ${student[0].marks}`)
+        console.log(`Name: ${student[i].name} Marks: ${student[i].marks}%`)
     }
+
+    let sum = 0
+    for(let i = 0; i < student.length; i++){ sum+= student[i].marks;}
+
+    const average = sum/student.length;
+    console.log(`Average Mark: ${average}%`)
+    
+
